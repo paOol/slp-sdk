@@ -22,11 +22,11 @@ let outStr = ""
 const outObj = {}
 
 // create 256 bit BIP39 mnemonic
-const mnemonic = SLP.Mnemonic.generate(256, SLP.Mnemonic.wordLists()[lang])
+const mnemonic = SLP.Mnemonic.generate(128, SLP.Mnemonic.wordLists()[lang])
 console.log("BIP44 $BCH Wallet")
 outStr += "BIP44 $BCH Wallet\n"
-console.log(`256 bit ${lang} BIP39 Mnemonic: `, mnemonic)
-outStr += `\n256 bit ${lang} BIP32 Mnemonic:\n${mnemonic}\n\n`
+console.log(`128 bit ${lang} BIP39 Mnemonic: `, mnemonic)
+outStr += `\n128 bit ${lang} BIP32 Mnemonic:\n${mnemonic}\n\n`
 outObj.mnemonic = mnemonic
 
 // root seed buffer
